@@ -25,9 +25,9 @@ public class App {
                 temps[i] = scanner.nextInt();//a temperature expressed as an integer ranging from -273 to 5526
             }
             for (int i = 1; i < n; i++) {
-                if (Math.abs(temps[i]) < Math.abs(temps[i-1]) ) {
+                if ((Math.abs(temps[i]) < Math.abs(temps[i-1])) && (almostZero > temps[i]) ) {
                     almostZero = temps[i];
-                } else if (Math.abs(temps[i]) > Math.abs(temps[i-1]) && almostZero > temps[i-1]) {
+                } else if ((Math.abs(temps[i]) < Math.abs(temps[i-1])) && (almostZero > temps[i-1])) {
                     almostZero = temps[i-1];
                 }
             }
